@@ -1,0 +1,31 @@
+# Xcode
+DerivedData/
+build/
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# App-specific
+*.app
+*.app.dSYM
+*.log
+
+# Temporary / system files
+*.swp
+*.lock
+*.tmp
+*.DS_Store
+
+# User-specific settings
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# Archives
+*.xcarchive
