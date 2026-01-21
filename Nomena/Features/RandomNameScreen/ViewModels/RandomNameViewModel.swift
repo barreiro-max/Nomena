@@ -6,6 +6,7 @@ import Observation
     var errorMessage: String?
     
     private let repository: JSONRepository
+    private let loader: LoaderUseCase
     
     @ObservationIgnored
     private(set) var names: [String]
@@ -13,17 +14,18 @@ import Observation
     init(
         currentCard: NamedCard,
         repository: JSONRepository,
+        loader: LoaderUseCase,
         names: [String]
     ) {
         self.currentCard = currentCard
         self.repository = repository
+        self.loader = loader
         self.names = names
     }
     
     func fetchNames() {
         do {
-            let nameList = try repository.fetch(from: "names.json")
-            names = nameList.male + nameList.female
+            names = try loader.execute()
             errorMessage = nil
         } catch {
             errorMessage = error.localizedDescription
