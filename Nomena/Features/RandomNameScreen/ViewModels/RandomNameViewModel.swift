@@ -8,7 +8,7 @@ import Observation
     private let repository: JSONRepository
     
     @ObservationIgnored
-    private var names: [String]
+    private(set) var names: [String]
     
     init(
         currentCard: NamedCard,
