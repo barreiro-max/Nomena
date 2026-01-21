@@ -1,5 +1,5 @@
-protocol RandomNameRepository {
-    func fetchNames() throws -> NameList
+protocol JSONRepository {
+    func fetch(from: String) throws -> NameList
 }
 
 
