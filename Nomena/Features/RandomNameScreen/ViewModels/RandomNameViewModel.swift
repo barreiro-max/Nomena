@@ -4,6 +4,7 @@ import Observation
 @Observable final class RandomNameViewModel {
     var currentCard: NamedCard?
     var errorMessage: String?
+    var isLoading: Bool = false
     
     private let repository: JSONRepository
     private let loader: LoaderUseCase
@@ -24,6 +25,8 @@ import Observation
     }
     
     func fetchNames() {
+        isLoading = true
+        defer { isLoading = false }
         do {
             names = try loader.execute()
             errorMessage = nil
