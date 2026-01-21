@@ -11,10 +11,21 @@
 		8439A4F82F1D86E900A701EB /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8439A4F72F1D86E900A701EB /* LICENSE.txt */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		84FEB99D2F203AF400E449C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 844F653E2F1D801D00DD8005 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 844F65452F1D801D00DD8005;
+			remoteInfo = Nomena;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		8439A4EE2F1D83FE00A701EB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8439A4F72F1D86E900A701EB /* LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		844F65462F1D801D00DD8005 /* Nomena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nomena.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84FEB9992F203AF400E449C4 /* NomenaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NomenaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,10 +34,22 @@
 			path = Nomena;
 			sourceTree = "<group>";
 		};
+		84FEB99A2F203AF400E449C4 /* NomenaTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = NomenaTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		844F65432F1D801D00DD8005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FEB9962F203AF400E449C4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				844F65482F1D801D00DD8005 /* Nomena */,
+				84FEB99A2F203AF400E449C4 /* NomenaTests */,
 				844F65472F1D801D00DD8005 /* Products */,
 				8439A4EE2F1D83FE00A701EB /* .gitignore */,
 				8439A4F72F1D86E900A701EB /* LICENSE.txt */,
@@ -50,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				844F65462F1D801D00DD8005 /* Nomena.app */,
+				84FEB9992F203AF400E449C4 /* NomenaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +104,29 @@
 			productReference = 844F65462F1D801D00DD8005 /* Nomena.app */;
 			productType = "com.apple.product-type.application";
 		};
+		84FEB9982F203AF400E449C4 /* NomenaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84FEB99F2F203AF400E449C4 /* Build configuration list for PBXNativeTarget "NomenaTests" */;
+			buildPhases = (
+				84FEB9952F203AF400E449C4 /* Sources */,
+				84FEB9962F203AF400E449C4 /* Frameworks */,
+				84FEB9972F203AF400E449C4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84FEB99E2F203AF400E449C4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				84FEB99A2F203AF400E449C4 /* NomenaTests */,
+			);
+			name = NomenaTests;
+			packageProductDependencies = (
+			);
+			productName = NomenaTests;
+			productReference = 84FEB9992F203AF400E449C4 /* NomenaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -91,6 +139,11 @@
 				TargetAttributes = {
 					844F65452F1D801D00DD8005 = {
 						CreatedOnToolsVersion = 16.1;
+					};
+					84FEB9982F203AF400E449C4 = {
+						CreatedOnToolsVersion = 16.1;
+						LastSwiftMigration = 1610;
+						TestTargetID = 844F65452F1D801D00DD8005;
 					};
 				};
 			};
@@ -109,6 +162,7 @@
 			projectRoot = "";
 			targets = (
 				844F65452F1D801D00DD8005 /* Nomena */,
+				84FEB9982F203AF400E449C4 /* NomenaTests */,
 			);
 		};
 /* End PBXProject section */
@@ -119,6 +173,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8439A4F82F1D86E900A701EB /* LICENSE.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84FEB9972F203AF400E449C4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +194,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84FEB9952F203AF400E449C4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84FEB99E2F203AF400E449C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 844F65452F1D801D00DD8005 /* Nomena */;
+			targetProxy = 84FEB99D2F203AF400E449C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		844F65522F1D801F00DD8005 /* Debug */ = {
@@ -323,6 +399,53 @@
 			};
 			name = Release;
 		};
+		84FEB9A02F203AF400E449C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q3ZBJKTDC2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.NomenaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nomena.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nomena";
+			};
+			name = Debug;
+		};
+		84FEB9A12F203AF400E449C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Q3ZBJKTDC2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.NomenaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nomena.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Nomena";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -340,6 +463,15 @@
 			buildConfigurations = (
 				844F65552F1D801F00DD8005 /* Debug */,
 				844F65562F1D801F00DD8005 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84FEB99F2F203AF400E449C4 /* Build configuration list for PBXNativeTarget "NomenaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84FEB9A02F203AF400E449C4 /* Debug */,
+				84FEB9A12F203AF400E449C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
