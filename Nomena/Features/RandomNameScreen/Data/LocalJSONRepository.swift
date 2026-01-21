@@ -2,9 +2,13 @@ import Foundation
 
 struct LocalJSONRepository: JSONRepository {
     func fetch(from filename: String) throws(RepositoryError) -> NameList {
+        let resource = filename.split(separator: ".")
+        let basename = String(resource[0])
+        let fileExtension = String(resource[resource.count - 1])
+
         guard let namesJSONURL = Bundle.main.url(
-            forResource: "names",
-            withExtension: "json")
+            forResource: basename,
+            withExtension: fileExtension)
         else { throw .fileNotFound }
 
         guard let namesJSONData = try? Data(contentsOf: namesJSONURL)
