@@ -5,14 +5,14 @@ import Observation
     var currentCard: NamedCard?
     var errorMessage: String?
     
-    private let repository: RandomNameRepository
+    private let repository: JSONRepository
     
     @ObservationIgnored
     private var names: [String]
     
     init(
         currentCard: NamedCard,
-        repository: RandomNameRepository,
+        repository: JSONRepository,
         names: [String]
     ) {
         self.currentCard = currentCard
@@ -22,7 +22,7 @@ import Observation
     
     func fetchNames() {
         do {
-            let nameList = try repository.fetchNames()
+            let nameList = try repository.fetch(from: "names.json")
             names = nameList.male + nameList.female
             errorMessage = nil
         } catch {

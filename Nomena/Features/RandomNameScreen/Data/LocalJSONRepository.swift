@@ -1,7 +1,7 @@
 import Foundation
 
-struct LocalJSONRepository: RandomNameRepository {
-    func fetchNames() throws(RepositoryError) -> NameList {
+struct LocalJSONRepository: JSONRepository {
+    func fetch(from filename: String) throws(RepositoryError) -> NameList {
         guard let namesJSONURL = Bundle.main.url(
             forResource: "names",
             withExtension: "json")
