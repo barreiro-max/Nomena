@@ -21,7 +21,7 @@ import Observation
         self.names = names
     }
     
-    func fetchNames() {
+    func loadNames() {
         isLoading = true
         defer { isLoading = false }
         do {
