@@ -6,7 +6,6 @@ import Observation
     var errorMessage: String?
     var isLoading: Bool = false
     
-    private let repository: JSONRepository
     private let loader: LoaderUseCase
     
     @ObservationIgnored
@@ -14,12 +13,10 @@ import Observation
     
     init(
         currentCard: NamedCard,
-        repository: JSONRepository,
         loader: LoaderUseCase,
         names: [String]
     ) {
         self.currentCard = currentCard
-        self.repository = repository
         self.loader = loader
         self.names = names
     }
