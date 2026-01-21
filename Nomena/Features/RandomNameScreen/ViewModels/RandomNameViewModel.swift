@@ -24,7 +24,7 @@ import Observation
     func loadNames() {
         isLoading = true
         defer { isLoading = false }
-        do {
+        do throws(RepositoryError) {
             names = try loader.execute()
             errorMessage = nil
         } catch {

@@ -1,5 +1,5 @@
 protocol LoaderUseCase {
-    func execute() throws -> [String]
+    func execute() throws(RepositoryError) -> [String]
 }
 
 struct NamesLoader: LoaderUseCase {
@@ -8,7 +8,7 @@ struct NamesLoader: LoaderUseCase {
         self.repository = repository
     }
     
-    func execute() throws -> [String] {
+    func execute() throws(RepositoryError) -> [String] {
         let nameList = try repository.fetch(from: "names.json")
         return nameList.male + nameList.female
     }
