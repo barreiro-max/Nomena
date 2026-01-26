@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  NomenaView.swift
 //  Nomena
 //
 //  Created by MaxTop4ik022 on 18.01.2026.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct NomenaView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +20,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    NomenaView()
 }
