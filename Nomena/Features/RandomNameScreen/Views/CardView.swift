@@ -12,7 +12,6 @@ struct CardView: View {
                     endPoint: .bottom
                 )
             )
-            .opacity(0.35)
             .shadow(
                 color: .black.opacity(0.65),
                 radius: 3, x: 5, y: 5
@@ -22,9 +21,8 @@ struct CardView: View {
                 Text(title)
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .frame( maxWidth: .infinity, maxHeight: 44)
+                    .frame(maxWidth: .infinity, maxHeight: 44)
             }
-            .padding()
     }
 }
 
