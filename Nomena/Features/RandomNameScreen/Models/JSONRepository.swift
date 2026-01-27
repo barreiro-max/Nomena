@@ -1,5 +1,5 @@
 protocol JSONRepository {
-    func fetch(from: String) throws(RepositoryError) -> NameList
+    func fetch(from: String) async throws(RepositoryError) -> NameList
 }
 
 

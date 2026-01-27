@@ -21,11 +21,11 @@ import Observation
         self.names = names
     }
     
-    func loadNames() {
+    func loadNames() async {
         isLoading = true
         defer { isLoading = false }
         do throws(RepositoryError) {
-            names = try loader.execute()
+            names = try await loader.execute()
             errorMessage = nil
         } catch {
             errorMessage = error.localizedDescription

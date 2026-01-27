@@ -1,7 +1,7 @@
 import Foundation
 
 struct LocalJSONRepository: JSONRepository {
-    func fetch(from filename: String) throws(RepositoryError) -> NameList {
+    func fetch(from filename: String) async throws(RepositoryError) -> NameList {
         let resource = filename.split(separator: ".")
         let basename = String(resource[0])
         let fileExtension = String(resource[resource.count - 1])
