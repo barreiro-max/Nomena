@@ -12,9 +12,9 @@ import Observation
     private(set) var names: [String]
     
     init(
-        currentCard: NamedCard,
+        currentCard: NamedCard? = nil,
         loader: LoaderUseCase,
-        names: [String]
+        names: [String] = []
     ) {
         self.currentCard = currentCard
         self.loader = loader
