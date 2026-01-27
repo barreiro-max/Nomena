@@ -4,7 +4,7 @@ import Observation
 @Observable final class RandomNameViewModel {
     var currentCard: NamedCard?
     var errorMessage: String?
-    var isLoading: Bool = false
+    private(set) var isLoading: Bool = false
     
     private let loader: LoaderUseCase
     
