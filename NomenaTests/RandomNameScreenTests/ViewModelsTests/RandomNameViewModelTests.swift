@@ -16,17 +16,17 @@ struct RandomNameViewModelTests {
     }
     
     @Test func viewModel_loadNames_expectedSixNames_fromMockRepo() async {
-        viewModel.loadNames()
+        await viewModel.loadNames()
         #expect(viewModel.names.count == 6)
     }
     
-    @Test func viewModel_loadNames_expectedErrorMessage_equalNil() {
-        viewModel.loadNames()
+    @Test func viewModel_loadNames_expectedErrorMessage_equalNil() async {
+        await viewModel.loadNames()
         #expect(viewModel.errorMessage == nil)
     }
     
-    @Test func viewModel_loadNames_expectedIsLoading_equalFalse() {
-        viewModel.loadNames()
+    @Test func viewModel_loadNames_expectedIsLoading_equalFalse() async {
+        await viewModel.loadNames()
         #expect(!viewModel.isLoading)
     }
     
@@ -38,8 +38,8 @@ struct RandomNameViewModelTests {
 
     }
 
-    @Test func viewModel_changeCard_setsCurrentCard_nonNil() {
-        viewModel.loadNames()
+    @Test func viewModel_changeCard_setsCurrentCard_nonNil() async {
+        await viewModel.loadNames()
         
         viewModel.changeCard()
         

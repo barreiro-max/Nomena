@@ -7,16 +7,16 @@ struct LocalJSONRepositoryTests {
     private let filename = "names.json"
     
     @Test
-    func repository_fetch_expectedDoesNotThrow() {
-        #expect(throws: Never.self) {
-            try sut.fetch(from: filename)
+    func repository_fetch_expectedDoesNotThrow() async {
+        await #expect(throws: Never.self) {
+            try await sut.fetch(from: filename)
         }
     }
     
     @Test
-    func repository_fetch_returnsNonEmptyMaleAndFemaleLists() throws {
+    func repository_fetch_returnsNonEmptyMaleAndFemaleLists() async throws {
         let names = try #require(
-            try sut.fetch(from: filename)
+            try await sut.fetch(from: filename)
         )
         #expect(!names.male.isEmpty)
         #expect(!names.female.isEmpty)
