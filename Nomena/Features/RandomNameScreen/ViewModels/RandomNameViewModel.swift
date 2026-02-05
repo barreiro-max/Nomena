@@ -2,21 +2,17 @@ import Observation
 
 @MainActor
 @Observable final class RandomNameViewModel {
-    var currentCard: NamedCard?
     var errorMessage: String?
     private(set) var isLoading: Bool = false
     
     private let loader: LoaderUseCase
     
-    @ObservationIgnored
     private(set) var names: [String]
     
     init(
-        currentCard: NamedCard? = nil,
         loader: LoaderUseCase,
         names: [String] = []
     ) {
-        self.currentCard = currentCard
         self.loader = loader
         self.names = names
     }
@@ -32,8 +28,7 @@ import Observation
         }
     }
     
-    func changeCard() {
-        let randomName = names.randomElement() ?? "Імʼя відсутнє"
-        currentCard = .init(name: randomName)
+    func randomCardName() -> String {
+        return names.randomElement() ?? "Імʼя відсутнє"
     }
 }
