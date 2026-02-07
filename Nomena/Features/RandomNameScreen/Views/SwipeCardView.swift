@@ -15,19 +15,21 @@ struct SwipeCardView: View {
             .rotationEffect(
                 .degrees(Double(offset.width / 30))
             )
-            .gesture(
-                DragGesture()
-                    .onChanged{ gesture in
-                        offset = gesture.translation
-                        changeColor(width: offset.width)
-                    }
-                    .onEnded{ _ in
-                        swipeCard(width: offset.width)
-                        changeColor(width: offset.width)
-                    }
-            )
+            .gesture(swipeCardGesture)
             .animation(.default, value: offset)
             .animation(.default, value: color)
+    }
+    
+    private var swipeCardGesture: some Gesture {
+        DragGesture()
+            .onChanged{ gesture in
+                offset = gesture.translation
+                changeColor(width: offset.width)
+            }
+            .onEnded{ _ in
+                swipeCard(width: offset.width)
+                changeColor(width: offset.width)
+            }
     }
     
     // MARK: - Swipe functions
